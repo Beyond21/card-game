@@ -1,0 +1,35 @@
+<html lang="en" ng-app="cardGame">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Game</title>
+</head>
+
+<body>
+
+
+    <div ng-controller="mainCtrl">
+        {{cards}}
+
+        <div class="row">
+            <div ng-repeat="card in cards"> <img src={{card.img}}> </div>
+        </div>
+        <div class="row">
+            {{card.name}}
+        </div>
+
+
+
+
+    </div>
+
+
+    <h1>DANIEL GAY</h1>
+
+    <script src="angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="mainCtrl.js"></script>
+
+</html>
