@@ -1,9 +1,11 @@
-<html lang="en" ng-app="cardGame">
+<html lang="en" ng-app="cardApp">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Memory Game</title>
 </head>
 
@@ -11,25 +13,35 @@
 
 
     <div ng-controller="mainCtrl">
-        {{cards}}
-
-        <div class="row">
-            <div ng-repeat="card in cards"> <img src={{card.img}}> </div>
-        </div>
-        <div class="row">
-            {{card.name}}
-        </div>
 
 
+
+    <section class="container">
+            <div class="row">
+                <div class="col-md-4" ng-repeat="card in cards">
+                    <div class="all-cards" >
+                        <img class="cards-img" src="{{card.img}}">
+                        <h4>{{card.name}}</h4>
+                        <div class="cover" ng-show="cardClicked" ng-click="removeCover()">remove</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
     </div>
 
 
-    <h1>DANIEL GAY</h1>
+
+
+
 
     <script src="angular/angular.js"></script>
     <script src="app.js"></script>
     <script src="mainCtrl.js"></script>
+    <script src="cardFactory.js"></script>
+
+</body>
 
 </html>

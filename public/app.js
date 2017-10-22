@@ -1,1 +1,2 @@
-var app = angular.module('cardGame', []);
+var app = angular.module('cardApp', []);
+
