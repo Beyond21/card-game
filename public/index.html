@@ -13,34 +13,35 @@
 
 
     <div ng-controller="mainCtrl">
-
-
-
-    <section class="container">
+        <section class="container">
             <div class="row">
-                <div class="col-md-4" ng-repeat="card in cards">
-                    <div class="all-cards" >
-                        <img class="cards-img" src="{{card.img}}">
-                        <h4>{{card.name}}</h4>
-                        <div class="cover" ng-show="cardClicked" ng-click="removeCover()">remove</div>
+                <h1 class="headlines">Baby Animals Memory Game</h1>
+            </div>
 
+            <div class="col-sm-2" ng-repeat="card in cards">
+
+                <div class="all-cards">
+                    <div class="row">
+                        <img class="cards-img" src="{{card.img}}" ng-show="card.isClicked">
+
+                        <img src="{{coverImg}}" class="cover-img" ng-hide="card.isClicked" ng-click="whenClicked1(card)">
+
+                        <!-- <h4>{{card.name}}</h4> -->
                     </div>
                 </div>
             </div>
         </section>
-
-
     </div>
 
 
 
-
-
-
+    <!-- <script src="@uirouter/core/_bundles/ui-router-core.js"></script>
+    <script src="@uirouter/angularjs/release/ui-router-angularjs.js"></script> -->
     <script src="angular/angular.js"></script>
     <script src="app.js"></script>
     <script src="mainCtrl.js"></script>
     <script src="cardFactory.js"></script>
+
 
 </body>
 
